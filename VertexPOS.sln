@@ -7,6 +7,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SRC", "SRC", "{0D66DE24-F10
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VertexPOS.Web", "SRC\VertexPOS.Web\VertexPOS.Web.csproj", "{36B56887-1955-4AF7-9F85-FB35D9BCFB19}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VertexPOS.Core", "VertexPOS.Core\VertexPOS.Core.csproj", "{F9E1F278-8806-4418-9989-81E72BC71AB3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,12 +19,17 @@ Global
 		{36B56887-1955-4AF7-9F85-FB35D9BCFB19}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{36B56887-1955-4AF7-9F85-FB35D9BCFB19}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{36B56887-1955-4AF7-9F85-FB35D9BCFB19}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9E1F278-8806-4418-9989-81E72BC71AB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9E1F278-8806-4418-9989-81E72BC71AB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9E1F278-8806-4418-9989-81E72BC71AB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9E1F278-8806-4418-9989-81E72BC71AB3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{36B56887-1955-4AF7-9F85-FB35D9BCFB19} = {0D66DE24-F106-47C2-93B4-ADFCADEE7174}
+		{F9E1F278-8806-4418-9989-81E72BC71AB3} = {0D66DE24-F106-47C2-93B4-ADFCADEE7174}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {85CFA96A-B83D-422D-9A97-69E3F08233DE}
