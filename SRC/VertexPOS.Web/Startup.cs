@@ -13,7 +13,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
+using VertexPOS.Core.Configuration;
+using VertexPOS.Core.Interfaces;
+using VertexPOS.Core.Repositories;
+using VertexPOS.Infrastructure;
 using VertexPOS.Infrastructure.Data;
+using VertexPOS.Infrastructure.Logging;
+using VertexPOS.Infrastructure.Repository;
 
 namespace VertexPOS.Web
 {
@@ -36,6 +42,8 @@ namespace VertexPOS.Web
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddRazorPages();
+
+            ConfigureAspnetRunServices(services);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -65,6 +73,29 @@ namespace VertexPOS.Web
             {
                 endpoints.MapRazorPages();
             });
+        }
+
+        private void ConfigureAspnetRunServices(IServiceCollection services)
+        {
+            // Add Core Layer
+            services.Configure<VertexPOSSetting>(Configuration);
+
+            // Add Infrastructure Layer
+            ConfigureDatabases(services);
+            services.AddScoped<IBrandRepository, BrandRepository>();
+            services.AddScoped(typeof(IAppLogger<>), typeof(LoggerAdapter<>));
+
+            // Add Miscellaneous
+            services.AddHttpContextAccessor();
+            //services.AddHealthChecks()
+            //    .AddCheck<IndexPageHealthCheck>("home_page_health_check");
+        }
+
+        public void ConfigureDatabases(IServiceCollection services)
+        {
+
+            services.AddDbContext<VertexPOSDbContext>(c =>
+                c.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
         }
     }
 }
