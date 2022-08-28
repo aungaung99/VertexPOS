@@ -13,7 +13,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-using VertexPOS.Web.Data;
+using VertexPOS.Infrastructure.Data;
 
 namespace VertexPOS.Web
 {

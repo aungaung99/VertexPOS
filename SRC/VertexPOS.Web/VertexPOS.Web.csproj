@@ -15,4 +15,8 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.17" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\VertexPOS.Infrastructure\VertexPOS.Infrastructure.csproj" />
+  </ItemGroup>
+
 </Project>

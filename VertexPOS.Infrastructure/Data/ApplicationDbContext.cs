@@ -3,9 +3,11 @@ using Microsoft.EntityFrameworkCore;
 
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
-namespace VertexPOS.Web.Data
+namespace VertexPOS.Infrastructure.Data
 {
     public class ApplicationDbContext : IdentityDbContext
     {
